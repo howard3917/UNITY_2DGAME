@@ -1,10 +1,17 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class NewBehaviourScript : MonoBehaviour
+public class MenuManager : MonoBehaviour
 {
-   void StartGame() 
-    { }
+   public void StartGame() 
+    {
+        print("開始遊戲");
+        SceneManager.LoadScene("LEVEL 1");   //場景
+    }   //SceneManager.LoadScene(1)                //編號
 
-   void QuitGame() 
-    { }
+   public void QuitGame() 
+    { 
+        print("結束遊戲");
+        Application.Quit();
+    }
 }
